@@ -1,9 +1,8 @@
 import styled from "styled-components";
 import Pergunta from "./Pergunta";
-import questoes from "../questoes";
 import logo from "../assets/logo.png";
 
-export default function Jogo() {
+export default function Jogo({questoes, contagem, setContagem}) {
     return (
         <JogoCx>
             <LogoCx>
@@ -13,7 +12,15 @@ export default function Jogo() {
             <ListaPerguntas>
                 {questoes.map((questao, i) => {
                     return (
-                        <Pergunta index={i} questao={questao.question} resposta={questao.answer} />
+                        <Pergunta
+                            key={questao.question}
+                            index={i}
+                            questao={questao.question}
+                            resposta={questao.answer}
+                            contagem={contagem}
+                            setContagem={setContagem}
+                            data-test="flashcard"
+                            />
                     )
                 })}
             </ListaPerguntas>

@@ -10,7 +10,7 @@ export default function BoasVindas() {
         <BoasVindasCx visivel={visivel}>
             <img src={logo} alt="Logo" />
             <p>ZapRecall</p> 
-            <button onClick={() => setVisivel("hidden")}>Iniciar Recall</button>
+            <button onClick={() => setVisivel("hidden")} data-test="start-btn">Iniciar Recall</button>
         </BoasVindasCx>
     )
 }

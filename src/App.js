@@ -1,16 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import BoasVindas from "./components/BoasVindas";
 import Jogo from "./components/Jogo";
 import Contador from "./components/Contador";
+import questoes from "./questoes";
 
 export default function App() {
+  const [contagem, setContagem] = useState(0);
 
   return (
     <AppCx>
       <BoasVindas />
-      <Jogo />
-      <Contador />
+      <Jogo questoes={questoes} contagem={contagem} setContagem={setContagem} />
+      <Contador questoes={questoes} contagem={contagem} />
     </AppCx>
   )
 }

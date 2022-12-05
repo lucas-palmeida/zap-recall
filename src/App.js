@@ -14,7 +14,7 @@ export default function App() {
       <Jogo questoes={questoes} contagem={contagem} setContagem={setContagem} />
       <Contador questoes={questoes} contagem={contagem} />
     </AppCx>
-  )
+  );
 }
 
 const AppCx = styled.div`
